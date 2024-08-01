@@ -45,7 +45,7 @@
 		"console-fail-test": "0.4.4",
 		"cspell": "8.12.1",
 		"eslint": "9.8.0",
-		"eslint-plugin-jsdoc": "48.8.3",
+		"eslint-plugin-jsdoc": "48.9.2",
 		"eslint-plugin-jsonc": "2.16.0",
 		"eslint-plugin-markdown": "5.1.0",
 		"eslint-plugin-n": "17.10.1",
