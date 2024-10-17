@@ -9,12 +9,12 @@ export function table(...parameters: TableParameters): string {
 	// ┌─────────┬──────
 	// │ (index) │
 	// ├─────────┼
-	const columnWidth = original.indexOf("┬─");
+	const columnWidth = original.indexOf("┬") + 1;
 
 	const trimmed = original
 		.split("\n")
-		.map((line) => line.slice(columnWidth))
+		.map((line) => line.charAt(0) + line.slice(columnWidth))
 		.join("\n");
 
-	return "┌" + trimmed.slice(1);
+	return trimmed;
 }
