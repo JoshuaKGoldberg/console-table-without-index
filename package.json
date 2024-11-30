@@ -43,7 +43,7 @@
 		"@types/eslint-plugin-markdown": "2.0.2",
 		"@vitest/coverage-v8": "2.1.6",
 		"console-fail-test": "0.5.0",
-		"cspell": "8.16.0",
+		"cspell": "8.16.1",
 		"eslint": "9.14.0",
 		"eslint-plugin-jsdoc": "50.6.0",
 		"eslint-plugin-jsonc": "2.18.2",
