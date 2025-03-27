@@ -1,70 +1,55 @@
 {
-  "badgeTemplate": "\t<a href=\"#contributors\" target=\"_blank\"><img alt=\"👪 All Contributors: <%= contributors.length %>\" src=\"https://img.shields.io/badge/%F0%9F%91%AA_all_contributors-<%= contributors.length %>-21bb42.svg\" /></a>",
-  "commit": false,
-  "commitConvention": "angular",
-  "commitType": "docs",
-  "contributors": [
-    {
-      "login": "JoshuaKGoldberg",
-      "name": "Josh Goldberg ✨",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3335181?v=4",
-      "profile": "http://www.joshuakgoldberg.com/",
-      "contributions": [
-        "code",
-        "content",
-        "doc",
-        "ideas",
-        "infra",
-        "maintenance",
-        "projectManagement",
-        "tool"
-      ]
-    },
-    {
-      "login": "AgentEnder",
-      "name": "Craigory Coppola",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6933928?v=4",
-      "profile": "https://www.craigory.dev/",
-      "contributions": [
-        "ideas"
-      ]
-    },
-    {
-      "login": "fisker",
-      "name": "fisker Cheung",
-      "avatar_url": "https://avatars.githubusercontent.com/u/172584?v=4",
-      "profile": "https://www.fiskercheung.com/",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "noinkling",
-      "name": "Malcolm",
-      "avatar_url": "https://avatars.githubusercontent.com/u/4338251?v=4",
-      "profile": "https://github.com/noinkling",
-      "contributions": [
-        "bug"
-      ]
-    },
-    {
-      "login": "whyboris",
-      "name": "Boris",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17264277?v=4",
-      "profile": "https://yboris.dev",
-      "contributions": [
-        "ideas"
-      ]
-    }
-  ],
-  "contributorsPerLine": 7,
-  "contributorsSortAlphabetically": true,
-  "files": [
-    "README.md"
-  ],
-  "imageSize": 100,
-  "projectName": "console-table-without-index",
-  "projectOwner": "JoshuaKGoldberg",
-  "repoHost": "https://github.com",
-  "repoType": "github"
+	"badgeTemplate": "\t<a href=\"#contributors\" target=\"_blank\"><img alt=\"👪 All Contributors: <%= contributors.length %>\" src=\"https://img.shields.io/badge/%F0%9F%91%AA_all_contributors-<%= contributors.length %>-21bb42.svg\" /></a>",
+	"contributors": [
+		{
+			"login": "JoshuaKGoldberg",
+			"name": "Josh Goldberg ✨",
+			"avatar_url": "https://avatars.githubusercontent.com/u/3335181?v=4",
+			"profile": "http://www.joshuakgoldberg.com/",
+			"contributions": [
+				"code",
+				"content",
+				"doc",
+				"ideas",
+				"infra",
+				"maintenance",
+				"projectManagement",
+				"tool"
+			]
+		},
+		{
+			"login": "AgentEnder",
+			"name": "Craigory Coppola",
+			"avatar_url": "https://avatars.githubusercontent.com/u/6933928?v=4",
+			"profile": "https://www.craigory.dev/",
+			"contributions": ["ideas"]
+		},
+		{
+			"login": "fisker",
+			"name": "fisker Cheung",
+			"avatar_url": "https://avatars.githubusercontent.com/u/172584?v=4",
+			"profile": "https://www.fiskercheung.com/",
+			"contributions": ["code"]
+		},
+		{
+			"login": "noinkling",
+			"name": "Malcolm",
+			"avatar_url": "https://avatars.githubusercontent.com/u/4338251?v=4",
+			"profile": "https://github.com/noinkling",
+			"contributions": ["bug"]
+		},
+		{
+			"login": "whyboris",
+			"name": "Boris",
+			"avatar_url": "https://avatars.githubusercontent.com/u/17264277?v=4",
+			"profile": "https://yboris.dev",
+			"contributions": ["ideas"]
+		}
+	],
+	"contributorsSortAlphabetically": true,
+	"projectName": "console-table-without-index",
+	"projectOwner": "JoshuaKGoldberg",
+	"repoType": "github",
+	"commitConvention": "angular"
 }
+
