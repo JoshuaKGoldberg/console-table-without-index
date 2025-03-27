@@ -43,15 +43,37 @@ Wouldn't it be nice to get rid of it if you don't need it?
 
 ## Usage
 
+With this utility:
+
 ```shell
 npm i console-table-without-index
 ```
 
 ```ts
-import { greet } from "console-table-without-index";
+import { table } from "console-table-without-index";
 
-greet("Hello, world! 📊");
+console.log(
+	table([
+		{ emoji: "🍏", fruit: "apple" },
+		{ emoji: "🍌", fruit: "banana" },
+		{ emoji: "🍒", fruit: "cherry" },
+	]),
+);
 ```
+
+```plaintext
+┌───────┬──────────┐
+│ emoji │ fruit    │
+├───────┼──────────┤
+│ '🍏'  │ 'apple'  │
+│ '🍌'  │ 'banana' │
+│ '🍒'  │ 'cherry' │
+└───────┴──────────┘
+```
+
+Hooray!
+No more `(index)`!
+🙌
 
 ## Development
 
