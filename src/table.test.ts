@@ -16,7 +16,7 @@ vi.mock("not-a-log", async () => {
 	});
 	const logger = new Console({ colorMode: false, stderr: ts, stdout: ts });
 	const handler = {
-		/* eslint-disable @typescript-eslint/ban-ts-comment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return */
+		/* eslint-disable @typescript-eslint/ban-ts-comment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return, @typescript-eslint/prefer-nullish-coalescing */
 		// @ts-ignore
 		apply(target, _, args) {
 			target.apply(logger, args);

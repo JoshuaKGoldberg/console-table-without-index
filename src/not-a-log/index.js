@@ -2,8 +2,7 @@
 
 // Copied to a local import because Vitest crashes on it:
 // https://github.com/vitest-dev/vitest/issues/6115
-
-/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-assignment */
+// https://github.com/jimmywarting/not-a-log/issues/2
 
 import { Console } from "console";
 import { Transform } from "stream";
@@ -22,5 +21,3 @@ const handler = {
 
 const dump = new Proxy(logger, handler);
 export default dump;
-
-/* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-assignment */
