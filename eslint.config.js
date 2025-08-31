@@ -31,6 +31,11 @@ export default tseslint.config(
 	jsonc.configs["flat/recommended-with-json"],
 	markdown.configs.recommended,
 	n.configs["flat/recommended"],
+	{
+		rules: {
+			"n/no-missing-import": "off",
+		},
+	},
 	packageJson.configs.recommended,
 	perfectionist.configs["recommended-natural"],
 	regexp.configs["flat/recommended"],
