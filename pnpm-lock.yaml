@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      not-a-log:
-        specifier: ^1.0.1
-        version: 1.0.1
     devDependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
         specifier: 4.7.0
@@ -3333,10 +3329,6 @@ packages:
   normalize-package-data@7.0.1:
     resolution: {integrity: sha512-linxNAT6M0ebEYZOx2tO6vBEFsVgnPpv+AVjk0wJHfaUIbq31Jm3T6vvZaarnOeWDh8ShnwXuaAyM7WT3RzErA==}
     engines: {node: ^18.17.0 || >=20.5.0}
-
-  not-a-log@1.0.1:
-    resolution: {integrity: sha512-N8ru5ZU0h4MPpMy1a8trKTcpIyHWMXHR27XmSpQ8qdBCqmrs8SMECUtwj9jTjPBlmAKirQ8h9rBobGaWagqgIQ==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   npm-email@5.1.0:
     resolution: {integrity: sha512-1fwpLd2ZuD7yZ8XaAfejB6fbKnDa+PwU3qzlkTy8sgy4C3KPjHpnBxo6fx3E3LjmcSKY34qEUD3ggx7HxxNvDQ==}
@@ -7775,8 +7767,6 @@ snapshots:
       hosted-git-info: 8.0.2
       semver: 7.8.5
       validate-npm-package-license: 3.0.4
-
-  not-a-log@1.0.1: {}
 
   npm-email@5.1.0:
     dependencies:
