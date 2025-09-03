@@ -13,7 +13,7 @@ export function table(...parameters: TableParameters): string {
 
 	const trimmed = original
 		.split("\n")
-		.map((line: string) => line.charAt(0) + line.slice(columnWidth))
+		.map((line) => line.charAt(0) + line.slice(columnWidth))
 		.join("\n");
 
 	return trimmed;
