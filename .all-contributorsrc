@@ -67,10 +67,5 @@
   "projectName": "console-table-without-index",
   "projectOwner": "JoshuaKGoldberg",
   "repoType": "github",
-  "commitConvention": "angular",
-  "files": [
-    "README.md"
-  ],
-  "commitType": "docs",
-  "contributorsPerLine": 7
+  "commitConvention": "angular"
 }
