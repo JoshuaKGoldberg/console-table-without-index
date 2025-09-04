@@ -1,23 +1,19 @@
 /*! not-a-logger. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
 
-// Copied to a local import because Vitest crashes on it:
-// https://github.com/vitest-dev/vitest/issues/6115
-// https://github.com/jimmywarting/not-a-log/issues/2
-
-import { Console } from "console";
-import { Transform } from "stream";
+// TODO: Replace this copied code with the actual 'not-a-log' dependency:
+// https://github.com/JoshuaKGoldberg/console-table-without-index/issues/374
+import { Console } from "node:console";
+import { Transform } from "node:stream";
 
 const ts = new Transform({ transform: (chunk, _, cb) => cb(null, chunk) });
-const logger = new Console({ colorMode: false, stderr: ts, stdout: ts });
-const handler = {
-	apply(target, _, args) {
-		target.apply(logger, args);
-		return (ts.read() || "").toString();
-	},
-	get(_, prop) {
-		return new Proxy(logger[prop], handler);
-	},
-};
+const logger = new Console({ stdout: ts, stderr: ts, colorMode: false });
+const { has, get, apply } = Reflect;
 
-const dump = new Proxy(logger, handler);
-export default dump;
+const getProxy = (t) =>
+	new Proxy(t, {
+		get: (...args) => (has(...args) ? getProxy(get(...args)) : undefined),
+		apply: (...args) => (apply(...args), (ts.read() || "").toString()),
+	});
+
+/** @type {import('./types.d.ts').Dump} */
+export default getProxy(logger);

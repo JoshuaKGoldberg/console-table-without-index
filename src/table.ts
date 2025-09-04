@@ -1,4 +1,4 @@
-import logger from "not-a-log";
+import logger from "./not-a-log/index.js";
 
 export type TableParameters = Parameters<(typeof logger)["table"]>;
 
@@ -13,7 +13,7 @@ export function table(...parameters: TableParameters): string {
 
 	const trimmed = original
 		.split("\n")
-		.map((line) => line.charAt(0) + line.slice(columnWidth))
+		.map((line: string) => line.charAt(0) + line.slice(columnWidth))
 		.join("\n");
 
 	return trimmed;
