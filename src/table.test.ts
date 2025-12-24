@@ -56,7 +56,8 @@ describe("table", () => {
 		],
 	])("%j", async (input) => {
 		expect({
-			original: "\n" + (await import("not-a-log")).default.table(input),
+			original:
+				"\n" + (await import("./not-a-log/index.js")).default.table(input),
 			result: "\n" + table(input),
 		}).toMatchSnapshot();
 	});
