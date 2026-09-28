@@ -1,7 +1,15 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
-import logger from "./not-a-log.js";
+import logger, { colorDump } from "./not-a-log.js";
 import { table } from "./table.js";
+
+const mockShouldColorize = vi.fn().mockReturnValue(false);
+
+vi.mock("./should-colorize.js", () => ({
+	get shouldColorize() {
+		return mockShouldColorize;
+	},
+}));
 
 describe("table", () => {
 	it.each([
@@ -34,5 +42,25 @@ describe("table", () => {
 			original: "\n" + logger.table(input),
 			result: "\n" + table(input),
 		}).toMatchSnapshot();
+	});
+
+	describe("with color", () => {
+		it.each([
+			["colored values", [{ amount: 5, date: "2024-10-22" }]],
+			[
+				"a colored index column",
+				new Map([
+					["apple", "🍏"],
+					["banana", "🍌"],
+				]),
+			],
+		])("%s", (_, input) => {
+			mockShouldColorize.mockReturnValue(true);
+
+			expect({
+				original: "\n" + colorDump.table(input),
+				result: "\n" + table(input),
+			}).toMatchSnapshot();
+		});
 	});
 });
