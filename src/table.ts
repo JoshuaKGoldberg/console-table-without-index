@@ -26,8 +26,6 @@ export function table(...parameters: TableParameters): string {
 	return trimmed;
 }
 
-// Keys may contain characters whose displayed width differs from their length,
-// so the end of the (index) column is found by displayed width per line.
 function findIndexAtWidth(line: string, targetWidth: number) {
 	let width = 0;
 
