@@ -37,7 +37,9 @@ const handler: ProxyHandler<LoggerMethod> = {
 
 const dump = new Proxy(logger, {
 	get(target, property) {
-		return new Proxy(Reflect.get(target, property) as LoggerMethod, handler);
+		return Reflect.has(target, property)
+			? new Proxy(Reflect.get(target, property) as LoggerMethod, handler)
+			: undefined;
 	},
 }) as unknown as Dump;
 
