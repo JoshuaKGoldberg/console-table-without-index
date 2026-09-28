@@ -1,4 +1,4 @@
-import logger from "./not-a-log/index.js";
+import logger from "./not-a-log.js";
 
 export type TableParameters = Parameters<(typeof logger)["table"]>;
 
