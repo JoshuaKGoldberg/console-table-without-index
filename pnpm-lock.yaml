@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      string-width:
+        specifier: ^7.2.0
+        version: 7.2.0
     devDependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
         specifier: 4.7.0
