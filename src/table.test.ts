@@ -21,6 +21,14 @@ describe("table", () => {
 				{ emoji: "🍒", fruit: "cherry" },
 			],
 		],
+		{
+			"𝖮𝖧 𝖭𝖮": { a: "foo", b: "bar" },
+			好好好好好: { a: "foo", b: "bar" },
+		},
+		{
+			"a│b": { a: "foo", b: "bar" },
+			café: { a: "foo", b: "bar" },
+		},
 	])("%j", (input) => {
 		expect({
 			original: "\n" + logger.table(input),
