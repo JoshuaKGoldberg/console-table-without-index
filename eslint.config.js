@@ -13,14 +13,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
 	{
-		ignores: [
-			"**/*.snap",
-			"coverage",
-			"lib",
-			"node_modules",
-			"pnpm-lock.yaml",
-			"src/not-a-log",
-		],
+		ignores: ["**/*.snap", "coverage", "lib", "node_modules", "pnpm-lock.yaml"],
 	},
 	{ linterOptions: { reportUnusedDisableDirectives: "error" } },
 	eslint.configs.recommended,
@@ -47,7 +40,6 @@ export default tseslint.config(
 			},
 		},
 		rules: {
-			"n/no-missing-import": "off",
 			// Stylistic concerns that don't interfere with Prettier
 			"logical-assignment-operators": [
 				"error",
