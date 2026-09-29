@@ -3,6 +3,13 @@ import stringWidth from "string-width";
 import logger, { colorDump } from "./not-a-log.js";
 import { shouldColorize } from "./should-colorize.js";
 
+export interface TableOptions {
+	/**
+	 * Whether to colorize values, defaulting to how console.table decides.
+	 */
+	colors?: boolean;
+}
+
 export type TableParameters = Parameters<(typeof logger)["table"]>;
 
 // Color codes emitted by util.inspect, such as \u001B[33m
@@ -11,8 +18,12 @@ const ansiEscape = /(\u001B\[[\d;]*m)/;
 
 const segmenter = new Intl.Segmenter();
 
-export function table(...parameters: TableParameters): string {
-	const original = (shouldColorize() ? colorDump : logger).table(...parameters);
+export function table(
+	tabularData: TableParameters[0],
+	properties?: TableParameters[1],
+	{ colors = shouldColorize() }: TableOptions = {},
+): string {
+	const original = (colors ? colorDump : logger).table(tabularData, properties);
 
 	// Tables should all start with roughly:
 	// ┌─────────┬──────

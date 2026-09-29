@@ -76,6 +76,11 @@ No more `(index)`!
 🙌
 
 Like `console.table`, values are colorized when `process.stdout` supports color, or when the `FORCE_COLOR` environment variable says to.
+You can override that with a `colors` option:
+
+```ts
+table(data, undefined, { colors: false });
+```
 
 ## Development
 

@@ -1,17 +1,19 @@
-import { describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import logger, { colorDump } from "./not-a-log.js";
 import { table } from "./table.js";
 
-const mockShouldColorize = vi.fn().mockReturnValue(false);
+const mockShouldColorize = vi.hoisted(() => vi.fn());
 
 vi.mock("./should-colorize.js", () => ({
-	get shouldColorize() {
-		return mockShouldColorize;
-	},
+	shouldColorize: mockShouldColorize,
 }));
 
 describe("table", () => {
+	beforeEach(() => {
+		mockShouldColorize.mockReturnValue(false);
+	});
+
 	it.each([
 		["🍏", "🍌", "🍒"],
 		[["🍏", "🍌", "🍒"]],
@@ -61,6 +63,20 @@ describe("table", () => {
 				original: "\n" + colorDump.table(input),
 				result: "\n" + table(input),
 			}).toMatchSnapshot();
+		});
+
+		it("colorizes when colors is true even if color is not supported", () => {
+			const result = table([{ amount: 5 }], undefined, { colors: true });
+
+			expect(result).toContain("\u001B[33m5\u001B[39m");
+		});
+
+		it("does not colorize when colors is false even if color is supported", () => {
+			mockShouldColorize.mockReturnValue(true);
+
+			const result = table([{ amount: 5 }], undefined, { colors: false });
+
+			expect(result).not.toContain("\u001B[");
 		});
 	});
 });
