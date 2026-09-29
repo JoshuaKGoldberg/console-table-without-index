@@ -65,16 +65,10 @@ describe("table", () => {
 			}).toMatchSnapshot();
 		});
 
-		it("colorizes when colors is true even if color is not supported", () => {
-			const result = table([{ amount: 5 }], undefined, { colors: true });
-
-			expect(result).toContain("\u001B[33m5\u001B[39m");
-		});
-
-		it("does not colorize when colors is false even if color is supported", () => {
+		it("does not colorize when plain is true even if color is supported", () => {
 			mockShouldColorize.mockReturnValue(true);
 
-			const result = table([{ amount: 5 }], undefined, { colors: false });
+			const result = table([{ amount: 5 }], undefined, { plain: true });
 
 			expect(result).not.toContain("\u001B[");
 		});
