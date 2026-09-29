@@ -12,7 +12,8 @@ export interface TableOptions {
 
 export type TableParameters = Parameters<(typeof logger)["table"]>;
 
-const ansiEscape = new RegExp(`(${String.fromCodePoint(27)}\\[[\\d;]*m)`);
+// eslint-disable-next-line no-control-regex -- matching the ESC control character is the point
+const ansiEscape = /(\u001B\[[\d;]*m)/;
 
 const segmenter = new Intl.Segmenter();
 
