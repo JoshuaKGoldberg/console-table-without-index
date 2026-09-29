@@ -16,31 +16,37 @@ type Dump = {
 
 type LoggerMethod = (...args: unknown[]) => void;
 
-const stream = new Transform({
-	transform: (chunk, _, callback) => {
-		callback(null, chunk);
-	},
-});
+function createDump(colorMode: boolean) {
+	const stream = new Transform({
+		transform: (chunk, _, callback) => {
+			callback(null, chunk);
+		},
+	});
 
-const logger = new Console({
-	colorMode: false,
-	stderr: stream,
-	stdout: stream,
-});
+	const logger = new Console({
+		colorMode,
+		stderr: stream,
+		stdout: stream,
+	});
 
-const handler: ProxyHandler<LoggerMethod> = {
-	apply(target, _, args) {
-		Reflect.apply(target, logger, args);
-		return (stream.read() as Buffer | null)?.toString() ?? "";
-	},
-};
+	const handler: ProxyHandler<LoggerMethod> = {
+		apply(target, _, args) {
+			Reflect.apply(target, logger, args);
+			return (stream.read() as Buffer | null)?.toString() ?? "";
+		},
+	};
 
-const dump = new Proxy(logger, {
-	get(target, property) {
-		return Reflect.has(target, property)
-			? new Proxy(Reflect.get(target, property) as LoggerMethod, handler)
-			: undefined;
-	},
-}) as unknown as Dump;
+	return new Proxy(logger, {
+		get(target, property) {
+			return Reflect.has(target, property)
+				? new Proxy(Reflect.get(target, property) as LoggerMethod, handler)
+				: undefined;
+		},
+	}) as unknown as Dump;
+}
+
+export const colorDump = createDump(true);
+
+const dump = createDump(false);
 
 export default dump;

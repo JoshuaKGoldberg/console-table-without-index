@@ -75,6 +75,13 @@ Hooray!
 No more `(index)`!
 🙌
 
+Like `console.table`, values are colorized when `process.stdout` supports color, or when the `FORCE_COLOR` environment variable says to.
+You can disable that with a `plain` option:
+
+```ts
+table(data, undefined, { plain: true });
+```
+
 ## Development
 
 See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then [`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md).
