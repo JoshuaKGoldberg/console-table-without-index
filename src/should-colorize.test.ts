@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { shouldColorize } from "./should-colorize.js";
+import { shouldColorize } from "./should-colorize.ts";
 
 function stubStdout(isTTY: boolean, colorDepth = 8) {
 	vi.spyOn(process, "stdout", "get").mockReturnValue({
@@ -9,7 +9,7 @@ function stubStdout(isTTY: boolean, colorDepth = 8) {
 	} as typeof process.stdout);
 }
 
-describe("shouldColorize", () => {
+describe(shouldColorize, () => {
 	afterEach(() => {
 		vi.restoreAllMocks();
 		vi.unstubAllEnvs();
