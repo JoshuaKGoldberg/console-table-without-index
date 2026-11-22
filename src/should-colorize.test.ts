@@ -3,6 +3,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { shouldColorize } from "./should-colorize.ts";
 
 function stubStdout(isTTY: boolean, colorDepth = 8) {
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-class-instance-assignment -- test fake
 	vi.spyOn(process, "stdout", "get").mockReturnValue({
 		getColorDepth: () => colorDepth,
 		isTTY,
