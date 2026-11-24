@@ -75,6 +75,13 @@ Hooray!
 No more `(index)`!
 🙌
 
+Like `console.table`, values are colorized when `process.stdout` supports color, or when the `FORCE_COLOR` environment variable says to.
+You can disable that with a `plain` option:
+
+```ts
+table(data, undefined, { plain: true });
+```
+
 ## Development
 
 See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then [`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md).
@@ -85,25 +92,23 @@ Thanks! 📊
 <!-- spellchecker: disable -->
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://yboris.dev"><img src="https://avatars.githubusercontent.com/u/17264277?v=4?s=100" width="100px;" alt="Boris"/><br /><sub><b>Boris</b></sub></a><br /><a href="#ideas-whyboris" title="Ideas, Planning, & Feedback">🤔</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.craigory.dev/"><img src="https://avatars.githubusercontent.com/u/6933928?v=4?s=100" width="100px;" alt="Craigory Coppola"/><br /><sub><b>Craigory Coppola</b></sub></a><br /><a href="#ideas-AgentEnder" title="Ideas, Planning, & Feedback">🤔</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com/"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg ✨"/><br /><sub><b>Josh Goldberg ✨</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/commits?author=JoshuaKGoldberg" title="Code">💻</a> <a href="#content-JoshuaKGoldberg" title="Content">🖋</a> <a href="https://github.com/JoshuaKGoldberg/console-table-without-index/commits?author=JoshuaKGoldberg" title="Documentation">📖</a> <a href="#ideas-JoshuaKGoldberg" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-JoshuaKGoldberg" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-JoshuaKGoldberg" title="Maintenance">🚧</a> <a href="#projectManagement-JoshuaKGoldberg" title="Project Management">📆</a> <a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/noinkling"><img src="https://avatars.githubusercontent.com/u/4338251?v=4?s=100" width="100px;" alt="Malcolm"/><br /><sub><b>Malcolm</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/issues?q=author%3Anoinkling" title="Bug reports">🐛</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vitaly-t"><img src="https://avatars.githubusercontent.com/u/5108906?v=4?s=100" width="100px;" alt="Vitaly Tomilov"/><br /><sub><b>Vitaly Tomilov</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/issues?q=author%3Avitaly-t" title="Bug reports">🐛</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://yureitzk.com"><img src="https://avatars.githubusercontent.com/u/211355502?v=4?s=100" width="100px;" alt="Yurei TZK"/><br /><sub><b>Yurei TZK</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/commits?author=yureitzk" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.fiskercheung.com/"><img src="https://avatars.githubusercontent.com/u/172584?v=4?s=100" width="100px;" alt="fisker Cheung"/><br /><sub><b>fisker Cheung</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/commits?author=fisker" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://yboris.dev"><img src="https://avatars.githubusercontent.com/u/17264277?v=4&size=100" width="100px" height="100px" alt="Boris"/><br /><sub><b>Boris</b></sub></a><br /><a href="#ideas-whyboris" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.craigory.dev/"><img src="https://avatars.githubusercontent.com/u/6933928?v=4&size=100" width="100px" height="100px" alt="Craigory Coppola"/><br /><sub><b>Craigory Coppola</b></sub></a><br /><a href="#ideas-AgentEnder" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.fiskercheung.com/"><img src="https://avatars.githubusercontent.com/u/172584?v=4&size=100" width="100px" height="100px" alt="fisker Cheung"/><br /><sub><b>fisker Cheung</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/commits?author=fisker" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com/"><img src="https://avatars.githubusercontent.com/u/3335181?v=4&size=100" width="100px" height="100px" alt="Josh Goldberg ✨"/><br /><sub><b>Josh Goldberg ✨</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/commits?author=JoshuaKGoldberg" title="Code">💻</a> <a href="#content-JoshuaKGoldberg" title="Content">🖋</a> <a href="https://github.com/JoshuaKGoldberg/console-table-without-index/commits?author=JoshuaKGoldberg" title="Documentation">📖</a> <a href="#ideas-JoshuaKGoldberg" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-JoshuaKGoldberg" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-JoshuaKGoldberg" title="Maintenance">🚧</a> <a href="#projectManagement-JoshuaKGoldberg" title="Project Management">📆</a> <a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/noinkling"><img src="https://avatars.githubusercontent.com/u/4338251?v=4&size=100" width="100px" height="100px" alt="Malcolm"/><br /><sub><b>Malcolm</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/issues?q=author%3Anoinkling" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vitaly-t"><img src="https://avatars.githubusercontent.com/u/5108906?v=4&size=100" width="100px" height="100px" alt="Vitaly Tomilov"/><br /><sub><b>Vitaly Tomilov</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/issues?q=author%3Avitaly-t" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://yureitzk.com"><img src="https://avatars.githubusercontent.com/u/211355502?v=4&size=100" width="100px" height="100px" alt="Yurei TZK"/><br /><sub><b>Yurei TZK</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/console-table-without-index/commits?author=yureitzk" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
 
-<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- spellchecker: enable -->
 
-> 💝 This package was templated with [`create-typescript-app`](https://github.com/JoshuaKGoldberg/create-typescript-app) using the [Bingo engine](https://create.bingo).
+> 💝 This package was templated with [`create-typescript-app`](https://github.com/JoshuaKGoldberg/create-typescript-app) using the [Bingo framework](https://create.bingo).
