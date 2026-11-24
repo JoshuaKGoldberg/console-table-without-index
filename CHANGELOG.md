@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.0](https://github.com/JoshuaKGoldberg/console-table-without-index/compare/0.1.2...0.2.0) (2026-11-24)
+
+### Features
+
+- colorize output like console.table ([#735](https://github.com/JoshuaKGoldberg/console-table-without-index/issues/735)) ([87f077d](https://github.com/JoshuaKGoldberg/console-table-without-index/commit/87f077dcfaebc340d8bf1355642edc245cf01800)), closes [#176](https://github.com/JoshuaKGoldberg/console-table-without-index/issues/176)
+
+### Bug Fixes
+
+- bump to create-typescript-app@2.87.19 ([#737](https://github.com/JoshuaKGoldberg/console-table-without-index/issues/737)) ([6c0fff4](https://github.com/JoshuaKGoldberg/console-table-without-index/commit/6c0fff42b0a2f7fb9292f79069c642c2fe572985)), closes [#736](https://github.com/JoshuaKGoldberg/console-table-without-index/issues/736)
+
 ## [0.1.2](https://github.com/JoshuaKGoldberg/console-table-without-index/compare/0.1.1...0.1.2) (2026-09-28)
 
 ### Bug Fixes
