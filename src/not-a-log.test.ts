@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import logger from "./not-a-log.js";
+import logger from "./not-a-log.ts";
 
 describe("not-a-log", () => {
 	it("returns undefined for a property not on the console", () => {
@@ -9,7 +9,7 @@ describe("not-a-log", () => {
 
 	it("can be resolved as a promise value", async () => {
 		await expect(
-			import("./not-a-log.js").then((module) => module.default),
+			import("./not-a-log.ts").then((module) => module.default),
 		).resolves.toBe(logger);
 	});
 });

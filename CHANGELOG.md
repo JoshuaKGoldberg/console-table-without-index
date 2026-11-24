@@ -14,7 +14,7 @@
 
 - table border corners ([98da76c](https://github.com/JoshuaKGoldberg/console-table-without-index/commit/98da76cd7d7e7847cca2afc445dd68c3fe0dd8d9))
 
-# 0.1.0 (2024-07-15)
+## 0.1.0 (2024-07-15)
 
 ### Features
 

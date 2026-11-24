@@ -1,7 +1,7 @@
 import stringWidth from "string-width";
 
-import logger, { colorDump } from "./not-a-log.js";
-import { shouldColorize } from "./should-colorize.js";
+import logger, { colorDump } from "./not-a-log.ts";
+import { shouldColorize } from "./should-colorize.ts";
 
 export interface TableOptions {
 	/**

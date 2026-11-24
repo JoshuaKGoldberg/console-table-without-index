@@ -1,15 +1,15 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import logger, { colorDump } from "./not-a-log.js";
-import { table } from "./table.js";
+import logger, { colorDump } from "./not-a-log.ts";
+import { table } from "./table.ts";
 
 const mockShouldColorize = vi.hoisted(() => vi.fn());
 
-vi.mock("./should-colorize.js", () => ({
+vi.mock("./should-colorize.ts", () => ({
 	shouldColorize: mockShouldColorize,
 }));
 
-describe("table", () => {
+describe(table, () => {
 	beforeEach(() => {
 		mockShouldColorize.mockReturnValue(false);
 	});
